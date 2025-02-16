@@ -1,0 +1,36 @@
+#!/bin/bash
+# changevolume
+
+# Arbitrary but unique message tag
+msgTag="changevolume"
+
+# Get the default sink
+default_audio_sink="@DEFAULT_AUDIO_SINK@"
+
+current_volume=$(wpctl get-volume "$default_audio_sink" 2>/dev/null | awk '{print int($2 * 100)}')
+echo "Volume: $current_volume"
+
+if [[ $1 == *+ && "$current_volume" -ge "120" ]]; then
+    echo "Max value reached"
+    exit 1
+fi
+
+# Change the volume using WirePlumber
+wpctl set-volume $default_audio_sink "$1"
+
+# Query WirePlumber for the current volume and whether or not the speaker is muted
+volume=$(wpctl get-volume "$default_audio_sink" 2>/dev/null | awk '{print int($2 * 100)}')
+mute=$(wpctl get-mute "$default_audio_sink" 2>/dev/null | awk '{print ($2 == 1 ? "true" : "false")}')
+
+echo "Volume: $volume%, Muted: $mute"
+if [[ $volume == 0 || $mute == true ]]; then
+    # Show the sound muted notification
+    dunstify -a "changevolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:$msgTag "Volume muted" 
+else
+    # Show the volume notification
+    dunstify -a "changevolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag \
+    -h int:value:"$volume" "Volume: ${volume}%"
+fi
+
+# Play the volume changed sound
+canberra-gtk-play -i audio-volume-change -d "changevolume"
