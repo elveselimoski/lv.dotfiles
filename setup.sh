@@ -19,6 +19,7 @@ ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/general.conf" "$HOME/.config/hypr/hy
 
 mkdir -p "$HOME/.scripts/hypr"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/changevolume" "$HOME/.scripts/hypr/changevolume"
+ln -sf "$DOTFILES_DIR/.scripts/hypr/wallpaper" "$HOME/.scripts/hypr/wallpaper"
 
 # Waybar
 mkdir -p "$HOME/.config/waybar"
