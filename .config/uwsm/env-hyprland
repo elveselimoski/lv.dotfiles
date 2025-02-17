@@ -1,0 +1,4 @@
+# https://wiki.hyprland.org/Configuring/Environment-variables/#hyprland-environment-variables
+export HYPRLAND_TRACE=1
+# https://wiki.hyprland.org/Configuring/Environment-variables/#aquamarine-environment-variables----ref-httpsgithubcomhyprwmaquamarineblobmaindocsenvmd---
+export AQ_TRACE=1

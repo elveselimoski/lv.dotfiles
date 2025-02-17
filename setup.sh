@@ -21,6 +21,11 @@ mkdir -p "$HOME/.scripts/hypr"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/changevolume" "$HOME/.scripts/hypr/changevolume"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/wallpaper" "$HOME/.scripts/hypr/wallpaper"
 
+# uwsm
+mkdir -p "$HOME/.config/uwsm"
+ln -sf "$DOTFILES_DIR/.config/uwsm/env" "$HOME/.config/uwsm/env"
+ln -sf "$DOTFILES_DIR/.config/uwsm/env-hyprland" "$HOME/.config/uwsm/env-hyprland"
+
 # Waybar
 mkdir -p "$HOME/.config/waybar"
 ln -sf "$DOTFILES_DIR/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
