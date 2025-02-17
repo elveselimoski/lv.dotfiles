@@ -10,12 +10,12 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "backlight",
         "pulseaudio",
         "battery",
         "custom/brightness",
         "tray",
-        "clock"
+        "clock",
+        "custom/power"
     ],
     "hyprland/window": {
         "format": "{}",
@@ -28,8 +28,8 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "\u25cf",
-            "default": "\u25cb"
+            "active": "\uebb4",
+            "default": "\uebb5"
         },
         "on-click": "activate",
         "sort-by-number": true,
@@ -115,27 +115,6 @@
             ""
         ]
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format": "{icon} {bandwidthTotalBytes}",
-        "format-disconnected": "{icon} No Internet",
-        "format-linked": "{icon}  {ifname} (No IP)",
-        "format-alt": "{icon} {bandwidthUpBytes} | {bandwidthDownBytes}",
-        "tooltip-format": "{icon} {ifname}: {ipaddr}/{cidr}  {gwaddr}",
-        "tooltip-format-wifi": "{wifiIcon} {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
-        "tooltip-format-disconnected": "{icon} Disconnected",
-        "on-click-right": "nm-connection-editor",
-        "format-icons": {
-            "ethernet": "",
-            "disconnected": "⚠",
-            "wifi": [
-                "",
-                ""
-            ]
-        },
-        "interval": 2
-    },
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -151,9 +130,15 @@
             "default": [
                 "",
                 "",
-                ""
+                " "
             ]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "uwsm app -- nwg-bar",
+        "interval": "once"
     }
 }

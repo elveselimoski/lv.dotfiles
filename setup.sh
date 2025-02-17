@@ -32,6 +32,9 @@ ln -sf "$DOTFILES_DIR/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.
 ln -sf "$DOTFILES_DIR/.config/waybar/theme.css" "$HOME/.config/waybar/theme.css"
 ln -sf "$DOTFILES_DIR/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 
+# Hyprpaper
+ln -sf "$DOTFILES_DIR/.config/hypr/hyprpaper.conf" "$HOME/.config/hypr/hyprpaper.conf"
+
 # Make scripts in the scripts/ directory executable
 find "$DOTFILES_DIR/.scripts/" -type f -exec chmod +x {} \;
 
