@@ -135,6 +135,9 @@
         },
         "on-click": "pavucontrol"
     },
+    "tray": {
+        "spacing": 12
+    },
     "custom/power": {
         "format": "⏻",
         "tooltip": false,

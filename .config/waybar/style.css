@@ -63,6 +63,12 @@ window#waybar {
     border-left: 1.5px solid;
 }
 
+#custom-udiskie {
+    padding-left: 10px;
+    padding-right: 20px;
+    color: @onPrimary;
+}
+
 #window,
 #workspaces {
     margin: 0 4px;
