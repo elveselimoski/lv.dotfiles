@@ -10,10 +10,11 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "tray",
+        "group/storage",
         "pulseaudio",
         "battery",
         "custom/brightness",
-        "tray",
         "clock",
         "custom/power"
     ],
@@ -34,85 +35,50 @@
         "on-click": "activate",
         "sort-by-number": true,
         "persistent-workspaces": {
-            "eDP-1": [
-                1,
-                2
-            ],
-            "HDMI-A-1": [
-                3,
-                4,
-                5,
-                6
-            ]
+            "*": 9
         }
     },
-    "backlight": {
-        "device": "amdgpu_bl1",
-        "interval": 2,
-        "align": 0,
-        "rotate": 0,
-        "format-icons": [
-            "",
-            "",
-            "",
-            "󰃝",
-            "󰃞",
-            "󰃟",
-            "󰃠"
-        ],
-        "format": "{icon}",
-        "tooltip-format": "backlight {percent}%",
-        "icon-size": 10,
-        "on-click": "brightnessctl set 1-",
-        "on-click-middle": "brightnessctl set 1-",
-        "on-click-right": "brightnessctl set 1-",
-        "on-update": "",
-        "on-scroll-up": "brightnessctl set 1+",
-        "on-scroll-down": "brightnessctl set 1-",
-        "smooth-scrolling-threshold": 1
+    "tray": {
+        "spacing": 12
     },
-    // "clock": {
-    //     "format": "{:%I:%M %p}",
-    //     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>\n<big>{:%I:%M %p}</big>"
-    // },
-    // "custom/brightness": {
-    //     "format": "{icon} {percent}%",
-    //     "format-alt": "{percent}%",
-    //     "on-click": "brightnessctl set +10%",
-    //     "on-scroll-up": "brightnessctl set +5%",
-    //     "on-scroll-down": "brightnessctl set 5%-",
-    //     "tooltip": false,
-    //     "format-icons": {
-    //         "low": "",
-    //         "medium": "",
-    //         "high": ""
-    //     }
-    // },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": [
-            "",
-            "",
-            ""
+    "group/storage": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "disk#root",
+            "disk#storage"
         ]
+    },
+    "disk#root": {
+        "path": "/",
+        "interval": 30,
+        "format": "  {percentage_used}%",
+        "tooltip-format": "{used} of {total} ({free} free)"
+    },
+    "disk#storage": {
+        "path": "/mnt/Storage",
+        "interval": 30,
+        "format": "  {percentage_used}%",
+        "tooltip-format": "{used} of {total} ({free} free)"
     },
     "battery": {
         "states": {
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}%  ",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
     },
     "pulseaudio": {
@@ -134,9 +100,6 @@
             ]
         },
         "on-click": "pavucontrol"
-    },
-    "tray": {
-        "spacing": 12
     },
     "custom/power": {
         "format": "⏻",

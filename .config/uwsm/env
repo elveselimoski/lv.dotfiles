@@ -1,7 +1,6 @@
 # Theme
 export GTK_THEME=Flat-Remix-GTK-Green-Dark
 export XCURSOR_THEME=Bibata-Modern-Ice
-export XCURSOR_SIZE=24
 export ICON_THEME=Papirus-Dark
 export XCURSOR_SIZE=16
 # export HYPRCURSOR_SIZE=16
@@ -33,7 +32,3 @@ export __GL_VRR_ALLOWED=0
 
 # https://wiki.hyprland.org/Nvidia/#va-api-hardware-video-acceleration
 # export NVD_BACKEND=direct
-
-# https://wiki.hyprland.org/Nvidia/#flickering-in-electron--cef-apps
-export ELECTRON_OZONE_PLATFORM_HINT=auto
-

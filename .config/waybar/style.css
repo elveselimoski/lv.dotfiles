@@ -51,7 +51,6 @@ window#waybar {
 #pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
@@ -63,7 +62,7 @@ window#waybar {
     border-left: 1.5px solid;
 }
 
-#custom-udiskie {
+#tray {
     padding-left: 10px;
     padding-right: 20px;
     color: @onPrimary;

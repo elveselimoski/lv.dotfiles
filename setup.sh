@@ -4,9 +4,6 @@ echo "Creating symlinks..."
 
 DOTFILES_DIR="$HOME/lv.dotfiles"
 
-# ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
-# ln -sf "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
-# ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/.bash_profile" "$HOME/.bash_profile"
 
 # Hyprland
@@ -34,6 +31,12 @@ ln -sf "$DOTFILES_DIR/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 
 # Hyprpaper
 ln -sf "$DOTFILES_DIR/.config/hypr/hyprpaper.conf" "$HOME/.config/hypr/hyprpaper.conf"
+
+# Hyprlock
+ln -sf "$DOTFILES_DIR/.config/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.conf"
+
+# Hypridle
+ln -sf "$DOTFILES_DIR/.config/hypr/hypridle.conf" "$HOME/.config/hypr/hypridle.conf"
 
 # Make scripts in the scripts/ directory executable
 find "$DOTFILES_DIR/.scripts/" -type f -exec chmod +x {} \;
