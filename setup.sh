@@ -4,7 +4,7 @@ echo "Creating symlinks..."
 
 DOTFILES_DIR="$HOME/lv.dotfiles"
 
-ln -sf "$DOTFILES_DIR/.bash_profile" "$HOME/.bash_profile"
+ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
 # Hyprland
 mkdir -p "$HOME/.config/hypr/hyprland"
@@ -37,6 +37,13 @@ ln -sf "$DOTFILES_DIR/.config/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.c
 
 # Hypridle
 ln -sf "$DOTFILES_DIR/.config/hypr/hypridle.conf" "$HOME/.config/hypr/hypridle.conf"
+
+# Kitty
+mkdir -p "$HOME/.config/kitty"
+ln -sf "$DOTFILES_DIR/.config/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+
+#Starship
+ln -sf "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
 
 # Make scripts in the scripts/ directory executable
 find "$DOTFILES_DIR/.scripts/" -type f -exec chmod +x {} \;
