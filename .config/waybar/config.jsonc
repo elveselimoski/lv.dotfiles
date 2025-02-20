@@ -4,6 +4,7 @@
     "margin-right": 10,
     "height": 38,
     "modules-left": [
+        "custom/systeminfo",
         "hyprland/window"
     ],
     "modules-center": [
@@ -18,11 +19,12 @@
         "custom/power"
     ],
     "hyprland/window": {
-        "format": "{}",
+        "format": "{initialTitle}",
         "max-length": 35,
         "rewrite": {
             "": "Hyprland"
         },
+        "icon": true,
         "separate-outputs": true
     },
     "hyprland/workspaces": {
@@ -37,6 +39,12 @@
             "eDP-1": 5,
             "HDMI-A-1": 5
         }
+    },
+    "custom/systeminfo": {
+        "format": "\udb82\udcc7",
+        "tooltip": false,
+        "on-click": "uwsm app -- hyprsysteminfo",
+        "interval": "once"
     },
     "tray": {
         "spacing": 12
