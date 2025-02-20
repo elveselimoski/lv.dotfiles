@@ -42,6 +42,11 @@ ln -sf "$DOTFILES_DIR/.config/hypr/hypridle.conf" "$HOME/.config/hypr/hypridle.c
 mkdir -p "$HOME/.config/kitty"
 ln -sf "$DOTFILES_DIR/.config/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 
+# Wofi
+mkdir -p "$HOME/.config/wofi"
+ln -sf "$DOTFILES_DIR/.config/wofi/style.css" "$HOME/.config/wofi/style.css"
+ln -sf "$DOTFILES_DIR/.config/wofi/config" "$HOME/.config/wofi/config"
+
 #Starship
 ln -sf "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
 
