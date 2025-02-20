@@ -47,6 +47,11 @@ mkdir -p "$HOME/.config/wofi"
 ln -sf "$DOTFILES_DIR/.config/wofi/style.css" "$HOME/.config/wofi/style.css"
 ln -sf "$DOTFILES_DIR/.config/wofi/config" "$HOME/.config/wofi/config"
 
+# nwg-bar
+mkdir -p "$HOME/.config/nwg-bar"
+ln -sf "$DOTFILES_DIR/.config/nwg-bar/style.css" "$HOME/.config/nwg-bar/style.css"
+ln -sf "$DOTFILES_DIR/.config/nwg-bar/bar.json" "$HOME/.config/nwg-bar/bar.json"
+
 #Starship
 ln -sf "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
 

@@ -1,0 +1,36 @@
+window {
+	background-color: transparent;
+	font-family: 'CaskaydiaCove Nerd Font', monospace;
+	font-size: 18px;
+}
+
+/* Outer bar container, takes all the window width/height */
+#outer-box {
+	margin: 0px
+}
+
+/* Inner bar container, surrounds buttons */
+#inner-box {
+	background-color: #282828;
+	border-radius: 10px;
+	border: 1.5px solid alpha(#ebdbb2, 0.7);
+	padding: 5px;
+	margin: 5px
+}
+
+button,
+image {
+	background: none;
+	border: none;
+	box-shadow: none
+}
+
+button {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px
+}
+
+button:hover, button:focus {
+	background-color: rgba(146, 131, 116, 0.3)
+}
