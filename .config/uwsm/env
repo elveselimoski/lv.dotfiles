@@ -1,7 +1,7 @@
 # Theme
-export GTK_THEME=Flat-Remix-GTK-Green-Dark
+export GTK_THEME=Gruvbox-Dark
 export XCURSOR_THEME=Bibata-Modern-Ice
-export ICON_THEME=Papirus-Dark
+export ICON_THEME=Gruvbox-Plus-Dark
 export XCURSOR_SIZE=16
 # export HYPRCURSOR_SIZE=16
 

@@ -4,11 +4,9 @@
 
 ```bash
 # Clone the GTK theme repo
-git clone https://github.com/daniruiz/flat-remix-gtk
-mkdir -p ~/.themes
-
-# Copy the dark green variant
-cp -r flat-remix-gtk/Flat-Remix-GTK-Green-Dark ~/.themes/
+git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
+cd Gruvbox-GTK-Theme
+./install.sh
 
 # Papirus Icon Theme
 sudo pacman -S papirus-icon-theme
@@ -23,15 +21,19 @@ yay -S bibata-cursor-theme
 # GTK Apps 
 sudo pacman -S lxappearance
 lxappearance
-# Select Flat-Remix-GTK-Green-Dark (Appearance), Papirus-Dark (Icons), and Bibata-Modern-Ice (Cursor).
+# Select Gruvbox-Dark (Appearance), Papirus-Dark (Icons), and Bibata-Modern-Ice (Cursor).
 ```
 
 ```ini
 # Hyprland Configuration - ~/.config/hypr/hyprland.conf or in uwsm conf ~/.config/uwsm/env
-env = GTK_THEME,Flat-Remix-GTK-Green-Darkest
+env = GTK_THEME,Gruvbox-Dark
 env = XCURSOR_THEME,Bibata-Modern-Ice
 env = XCURSOR_SIZE,24
 env = ICON_THEME,Papirus-Dark
+
+exec-once = gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Dark"
+exec-once = gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+exec-once = gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
 ```
 
 ```bash
@@ -42,3 +44,5 @@ qt5ct # Set theme to match GTK
 # Add env variable in uwsm or hyprland config
 export QT_QPA_PLATFORMTHEME=qt5ct
 ```
+
+# Waybar

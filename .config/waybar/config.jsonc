@@ -14,7 +14,6 @@
         "group/storage",
         "pulseaudio",
         "battery",
-        "custom/brightness",
         "clock",
         "custom/power"
     ],
@@ -60,7 +59,7 @@
         "tooltip-format": "{used} of {total} ({free} free)"
     },
     "disk#storage": {
-        "path": "/mnt/Storage",
+        "path": "/media/Storage",
         "interval": 30,
         "format": "  {percentage_used}%",
         "tooltip-format": "{used} of {total} ({free} free)"
@@ -102,7 +101,7 @@
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format": "⏻",
+        "format": "\u23fb",
         "tooltip": false,
         "on-click": "uwsm app -- nwg-bar",
         "interval": "once"

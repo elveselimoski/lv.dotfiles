@@ -14,3 +14,4 @@ compinit
 # End of lines added by compinstall
 
 eval "$(starship init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

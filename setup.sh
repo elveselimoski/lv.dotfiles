@@ -14,6 +14,8 @@ ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/keybindings.conf" "$HOME/.config/hyp
 ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/workspaces.conf" "$HOME/.config/hypr/hyprland/workspaces.conf"
 ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/general.conf" "$HOME/.config/hypr/hyprland/general.conf"
 
+ln -sf "$DOTFILES_DIR/.config/colors.css" "$HOME/.config/colors.css"
+
 mkdir -p "$HOME/.scripts/hypr"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/changevolume" "$HOME/.scripts/hypr/changevolume"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/wallpaper" "$HOME/.scripts/hypr/wallpaper"
@@ -26,7 +28,6 @@ ln -sf "$DOTFILES_DIR/.config/uwsm/env-hyprland" "$HOME/.config/uwsm/env-hyprlan
 # Waybar
 mkdir -p "$HOME/.config/waybar"
 ln -sf "$DOTFILES_DIR/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
-ln -sf "$DOTFILES_DIR/.config/waybar/theme.css" "$HOME/.config/waybar/theme.css"
 ln -sf "$DOTFILES_DIR/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 
 # Hyprpaper
@@ -38,9 +39,9 @@ ln -sf "$DOTFILES_DIR/.config/hypr/hyprlock.conf" "$HOME/.config/hypr/hyprlock.c
 # Hypridle
 ln -sf "$DOTFILES_DIR/.config/hypr/hypridle.conf" "$HOME/.config/hypr/hypridle.conf"
 
-# Kitty
-mkdir -p "$HOME/.config/kitty"
-ln -sf "$DOTFILES_DIR/.config/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+# Ghostty
+mkdir -p "$HOME/.config/ghostty"
+ln -sf "$DOTFILES_DIR/.config/ghostty/config" "$HOME/.config/ghostty/config"
 
 # Wofi
 mkdir -p "$HOME/.config/wofi"

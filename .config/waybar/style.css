@@ -1,38 +1,23 @@
-@import "theme.css";
+@import "../colors.css";
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: 'CaskaydiaCove Nerd Font', monospace;
     font-size: 16px;
+    color: @fg;
 }
 
 window#waybar {
-    background: none;
-}
-
-.modules-left,
-.modules-center,
-.modules-right{
-    background-color: @primary;
-    border: 1.5px solid @onPrimary;
-    border-radius: 6px;
-    padding: 0 4px;
+    background-color: transparent;
 }
 
 #workspaces button {
     border: none;
     padding: 0 4px;
-    color: @onPrimary;
-}
-
-#workspaces button:hover {
-    box-shadow: none;
-    background: none;
-    border: none;
 }
 
 #workspaces button.urgent {
-    background-color: @error;
+    background-color: @red;
 }
 
 #mode {
@@ -40,32 +25,36 @@ window#waybar {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
+.modules-left,
+.modules-center,
+#tray,
+#disk,
+#pulseaudio,
 #battery,
+#clock,
+#custom-power,
 #cpu,
 #memory,
-#disk,
 #temperature,
 #backlight,
 #network,
-#pulseaudio,
 #wireplumber,
 #custom-media,
 #mode,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#custom-power,
 #mpd {
+    background-color: shade(@bg, 0.7);
+    border: 1.5px solid alpha(@fg, 0.7);
     padding: 0 10px;
-    color: @onPrimary;
-    border-left: 1.5px solid;
+    border-radius: 8px;
+    margin: 0 4px;
 }
 
-#tray {
+#custom-power {
     padding-left: 10px;
-    padding-right: 20px;
-    color: @onPrimary;
+    padding-right: 14px;
 }
 
 #window,
@@ -75,8 +64,8 @@ window#waybar {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @base;
+        color: @fg;
     }
 }
 
@@ -123,10 +112,6 @@ label:focus {
     background-color: #9b59b6;
 }
 
-#disk {
-    background-color: #964B00;
-}
-
 #backlight {
     background-color: #90b1b1;
 }
@@ -167,7 +152,7 @@ label:focus {
 }
 
 #temperature.critical {
-    background-color: @error;
+    background-color: @red;
 }
 
 #tray > .passive {
@@ -176,7 +161,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @error;
+    background-color: @red;
 }
 
 #idle_inhibitor {
