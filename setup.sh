@@ -14,8 +14,6 @@ ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/keybindings.conf" "$HOME/.config/hyp
 ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/workspaces.conf" "$HOME/.config/hypr/hyprland/workspaces.conf"
 ln -sf "$DOTFILES_DIR/.config/hypr/hyprland/general.conf" "$HOME/.config/hypr/hyprland/general.conf"
 
-ln -sf "$DOTFILES_DIR/.config/colors.css" "$HOME/.config/colors.css"
-
 mkdir -p "$HOME/.scripts/hypr"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/changevolume" "$HOME/.scripts/hypr/changevolume"
 ln -sf "$DOTFILES_DIR/.scripts/hypr/wallpaper" "$HOME/.scripts/hypr/wallpaper"
@@ -29,6 +27,7 @@ ln -sf "$DOTFILES_DIR/.config/uwsm/env-hyprland" "$HOME/.config/uwsm/env-hyprlan
 mkdir -p "$HOME/.config/waybar"
 ln -sf "$DOTFILES_DIR/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
 ln -sf "$DOTFILES_DIR/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
+ln -sf "$DOTFILES_DIR/.config/waybar/colors.css" "$HOME/.config/waybar/colors.css"
 
 # Hyprpaper
 ln -sf "$DOTFILES_DIR/.config/hypr/hyprpaper.conf" "$HOME/.config/hypr/hyprpaper.conf"
