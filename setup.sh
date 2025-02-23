@@ -55,6 +55,10 @@ ln -sf "$DOTFILES_DIR/.config/nwg-bar/bar.json" "$HOME/.config/nwg-bar/bar.json"
 #Starship
 ln -sf "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
 
+# Neovim
+mkdir -p "$HOME/.config/nvim"
+# ln -sf "$DOTFILES_DIR/.config/nvim/init.lua" "$HOME/.config/nvim/init.lua"
+
 # Make scripts in the scripts/ directory executable
 find "$DOTFILES_DIR/.scripts/" -type f -exec chmod +x {} \;
 
