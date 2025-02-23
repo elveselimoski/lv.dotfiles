@@ -39,6 +39,6 @@ stow -R --target=$HOME/.config/nwg-bar nwg-bar --verbose
 
 # Neovim
 mkdir -p "$HOME/.config/nvim"
-# ln -sf "$DOTFILES_DIR/.config/nvim/init.lua" "$HOME/.config/nvim/init.lua"
+stow -R --target=$HOME/.config/nvim nvim --verbose
 
 echo "Symlinks created successfully!"
