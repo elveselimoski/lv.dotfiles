@@ -44,5 +44,3 @@ qt5ct # Set theme to match GTK
 # Add env variable in uwsm or hyprland config
 export QT_QPA_PLATFORMTHEME=qt5ct
 ```
-
-# Waybar
