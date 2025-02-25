@@ -2,6 +2,7 @@
 @define-color fg #ebdbb2;
 
 @define-color blue #458588;
+@define-color green #689d6a;
 @define-color red #cc241d;
 
 * {
@@ -52,9 +53,10 @@ window#waybar {
 #power-profiles-daemon,
 #mpd {
     background-color: shade(@bg, 0.7);
-    border: 1.5px solid alpha(@fg, 0.7);
+    border-image: linear-gradient(-45deg, alpha(@blue, 0.75), alpha(@green, 0.75)) 1;
+    border-style: solid;
+    border-width: 2px;
     padding: 0 10px;
-    border-radius: 8px;
     margin: 0 4px;
 }
 
