@@ -12,7 +12,7 @@ stow -R zsh --verbose
 stow -R --target=$HOME/.config starship --verbose
 
 # Hypr
-mkdir -p "$HOME/.config/hypr"
+mkdir -p "$HOME/.config/hypr/scripts"
 stow -R --target=$HOME/.config/hypr hypr --verbose
 # Make scripts executable
 find "$DOTFILES_DIR/hypr/scripts/" -type f -exec chmod +x {} \;
