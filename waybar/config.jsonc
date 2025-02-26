@@ -109,6 +109,9 @@
         },
         "on-click": "pavucontrol"
     },
+    "clock": {
+        "format": "{:%a %d %b %H:%M}"
+    },
     "custom/power": {
         "format": "\u23fb",
         "tooltip": false,
