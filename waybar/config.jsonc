@@ -21,7 +21,7 @@
         "custom/power"
     ],
     "custom/socialmedia" : {
-        "format": "",
+        "format": "🌐",
         "tooltip-format": "Social Media",
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/social_media_menu.xml",
@@ -31,12 +31,13 @@
         }
     },
     "custom/ai" : {
-        "format": "󰧑",
+        "format": "🤖",
         "tooltip-format": "AI",
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/ai_menu.xml",
         "menu-actions": {
             "deepseek": "brave https://chat.deepseek.com",
+            "grok": "brave https://grok.com",
             "misrtal": "brave https://chat.misrtal.ai"
         }
     },
@@ -86,13 +87,13 @@
     "disk#root": {
         "path": "/",
         "interval": 30,
-        "format": "  {percentage_used}%",
+        "format": "🗄️ {percentage_used}%",
         "tooltip-format": "{used} of {total} ({free} free)"
     },
     "disk#storage": {
         "path": "/media/Storage",
         "interval": 30,
-        "format": "  {percentage_used}%",
+        "format": "🗄️ {percentage_used}%",
         "tooltip-format": "{used} of {total} ({free} free)"
     },
     "battery": {
