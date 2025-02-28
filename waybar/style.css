@@ -32,6 +32,8 @@ window#waybar {
 }
 
 .modules-center,
+#custom-socialmedia,
+#custom-ai,
 #window,
 #custom-systeminfo,
 #tray,
@@ -60,6 +62,8 @@ window#waybar {
     margin: 0 4px;
 }
 
+#custom-socialmedia,
+#custom-ai,
 #custom-power,
 #custom-systeminfo {
     padding-left: 10px;

@@ -5,6 +5,8 @@
     "height": 38,
     "modules-left": [
         "custom/systeminfo",
+        "custom/socialmedia",
+        "custom/ai",
         "hyprland/window"
     ],
     "modules-center": [
@@ -18,6 +20,26 @@
         "clock",
         "custom/power"
     ],
+    "custom/socialmedia" : {
+        "format": "",
+        "tooltip-format": "Social Media",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/social_media_menu.xml",
+        "menu-actions": {
+            "reddit": "brave https://reddit.com",
+            "twitter": "brave https://x.com"
+        }
+    },
+    "custom/ai" : {
+        "format": "󰧑",
+        "tooltip-format": "AI",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/ai_menu.xml",
+        "menu-actions": {
+            "deepseek": "brave https://chat.deepseek.com",
+            "misrtal": "brave https://chat.misrtal.ai"
+        }
+    },
     "hyprland/window": {
         "format": "{initialTitle}",
         "max-length": 35,

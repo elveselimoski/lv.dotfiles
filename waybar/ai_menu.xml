@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+		<object class="GtkMenuItem" id="deepseek">
+			<property name="label">DeepSeek</property>
+        </object>
+	</child>
+	<child>
+        <object class="GtkMenuItem" id="mistral">
+			<property name="label">Mistral</property>
+        </object>
+	</child>
+  </object>
+</interface>
