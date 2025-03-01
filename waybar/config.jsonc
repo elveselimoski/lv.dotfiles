@@ -26,8 +26,8 @@
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/social_media_menu.xml",
         "menu-actions": {
-            "reddit": "brave https://reddit.com",
-            "twitter": "brave https://x.com"
+            "reddit": "uwsm app -- brave https://reddit.com",
+            "twitter": "uwsm app -- brave https://x.com"
         }
     },
     "custom/ai" : {
@@ -36,9 +36,10 @@
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/ai_menu.xml",
         "menu-actions": {
-            "deepseek": "brave https://chat.deepseek.com",
-            "grok": "brave https://grok.com",
-            "misrtal": "brave https://chat.misrtal.ai"
+            "deepseek": "uwsm app -- brave https://chat.deepseek.com",
+            "chatgpt": "uwsm app -- brave https://chat.gpt.com",
+            "grok": "uwsm app -- brave https://grok.com",
+            "misrtal": "uwsm app -- brave https://chat.misrtal.ai"
         }
     },
     "hyprland/window": {
