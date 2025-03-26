@@ -88,13 +88,13 @@
     "disk#root": {
         "path": "/",
         "interval": 30,
-        "format": "🗄️ {percentage_used}%",
+        "format": "\uf0a0  {percentage_used}%",
         "tooltip-format": "{used} of {total} ({free} free)"
     },
     "disk#storage": {
         "path": "/media/Storage",
         "interval": 30,
-        "format": "🗄️ {percentage_used}%",
+        "format": "\uf0a0  {percentage_used}%",
         "tooltip-format": "{used} of {total} ({free} free)"
     },
     "battery": {
